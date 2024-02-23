@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C3F95DC98E2D8AACD766FFF /* Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB200E88C333C22D6513E41 /* Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework */; };
+		7CE74686479904046B981837 /* Pods_CustomTabBarNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517DED543895CC53D88DE27B /* Pods_CustomTabBarNavigation.framework */; };
 		F53670782B88B0110050D4A5 /* CustomTabBarNavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670772B88B0110050D4A5 /* CustomTabBarNavigationApp.swift */; };
 		F536707A2B88B0110050D4A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670792B88B0110050D4A5 /* ContentView.swift */; };
 		F536707C2B88B0130050D4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F536707B2B88B0130050D4A5 /* Assets.xcassets */; };
@@ -14,6 +16,7 @@
 		F53670892B88B0130050D4A5 /* CustomTabBarNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670882B88B0130050D4A5 /* CustomTabBarNavigationTests.swift */; };
 		F53670932B88B0130050D4A5 /* CustomTabBarNavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670922B88B0130050D4A5 /* CustomTabBarNavigationUITests.swift */; };
 		F53670952B88B0130050D4A5 /* CustomTabBarNavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670942B88B0130050D4A5 /* CustomTabBarNavigationUITestsLaunchTests.swift */; };
+		F8E69A4ABFDAE0F4F7F5FDF5 /* Pods_CustomTabBarNavigationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E0440B16A137B3B61668C3 /* Pods_CustomTabBarNavigationTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		216E90B3FF845DD38D60D787 /* Pods-CustomTabBarNavigationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarNavigationTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomTabBarNavigationTests/Pods-CustomTabBarNavigationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		487DC75F577725C945539742 /* Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.release.xcconfig"; path = "Target Support Files/Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests/Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		517DED543895CC53D88DE27B /* Pods_CustomTabBarNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTabBarNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		748DDB483D6A175038C80DB2 /* Pods-CustomTabBarNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarNavigation.release.xcconfig"; path = "Target Support Files/Pods-CustomTabBarNavigation/Pods-CustomTabBarNavigation.release.xcconfig"; sourceTree = "<group>"; };
+		7A63DB5A7551FF46FBD21764 /* Pods-CustomTabBarNavigationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarNavigationTests.release.xcconfig"; path = "Target Support Files/Pods-CustomTabBarNavigationTests/Pods-CustomTabBarNavigationTests.release.xcconfig"; sourceTree = "<group>"; };
+		82E0440B16A137B3B61668C3 /* Pods_CustomTabBarNavigationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTabBarNavigationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3123E0C70CA2F868D2CDFCE /* Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.debug.xcconfig"; path = "Target Support Files/Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests/Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACB200E88C333C22D6513E41 /* Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF74F70763DE69C58E77BEBF /* Pods-CustomTabBarNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarNavigation.debug.xcconfig"; path = "Target Support Files/Pods-CustomTabBarNavigation/Pods-CustomTabBarNavigation.debug.xcconfig"; sourceTree = "<group>"; };
 		F53670742B88B0110050D4A5 /* CustomTabBarNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTabBarNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53670772B88B0110050D4A5 /* CustomTabBarNavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarNavigationApp.swift; sourceTree = "<group>"; };
 		F53670792B88B0110050D4A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE74686479904046B981837 /* Pods_CustomTabBarNavigation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E69A4ABFDAE0F4F7F5FDF5 /* Pods_CustomTabBarNavigationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +79,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C3F95DC98E2D8AACD766FFF /* Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73B69F0ADB4B198CE8422145 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				517DED543895CC53D88DE27B /* Pods_CustomTabBarNavigation.framework */,
+				ACB200E88C333C22D6513E41 /* Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework */,
+				82E0440B16A137B3B61668C3 /* Pods_CustomTabBarNavigationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CADCC2FEE552B754B830DA98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF74F70763DE69C58E77BEBF /* Pods-CustomTabBarNavigation.debug.xcconfig */,
+				748DDB483D6A175038C80DB2 /* Pods-CustomTabBarNavigation.release.xcconfig */,
+				A3123E0C70CA2F868D2CDFCE /* Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.debug.xcconfig */,
+				487DC75F577725C945539742 /* Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.release.xcconfig */,
+				216E90B3FF845DD38D60D787 /* Pods-CustomTabBarNavigationTests.debug.xcconfig */,
+				7A63DB5A7551FF46FBD21764 /* Pods-CustomTabBarNavigationTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F536706B2B88B0110050D4A5 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +117,8 @@
 				F53670872B88B0130050D4A5 /* CustomTabBarNavigationTests */,
 				F53670912B88B0130050D4A5 /* CustomTabBarNavigationUITests */,
 				F53670752B88B0110050D4A5 /* Products */,
+				CADCC2FEE552B754B830DA98 /* Pods */,
+				73B69F0ADB4B198CE8422145 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F53670982B88B0130050D4A5 /* Build configuration list for PBXNativeTarget "CustomTabBarNavigation" */;
 			buildPhases = (
+				0CD8DECAC50E6C631468C031 /* [CP] Check Pods Manifest.lock */,
 				F53670702B88B0110050D4A5 /* Sources */,
 				F53670712B88B0110050D4A5 /* Frameworks */,
 				F53670722B88B0110050D4A5 /* Resources */,
@@ -151,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F536709B2B88B0130050D4A5 /* Build configuration list for PBXNativeTarget "CustomTabBarNavigationTests" */;
 			buildPhases = (
+				E70758C0337B4616E4D0F9F2 /* [CP] Check Pods Manifest.lock */,
 				F53670802B88B0130050D4A5 /* Sources */,
 				F53670812B88B0130050D4A5 /* Frameworks */,
 				F53670822B88B0130050D4A5 /* Resources */,
@@ -169,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F536709E2B88B0130050D4A5 /* Build configuration list for PBXNativeTarget "CustomTabBarNavigationUITests" */;
 			buildPhases = (
+				CEB71D17027FDB008C9232A3 /* [CP] Check Pods Manifest.lock */,
 				F536708A2B88B0130050D4A5 /* Sources */,
 				F536708B2B88B0130050D4A5 /* Frameworks */,
 				F536708C2B88B0130050D4A5 /* Resources */,
@@ -251,6 +295,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CD8DECAC50E6C631468C031 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomTabBarNavigation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEB71D17027FDB008C9232A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E70758C0337B4616E4D0F9F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomTabBarNavigationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F53670702B88B0110050D4A5 /* Sources */ = {
@@ -416,6 +529,7 @@
 		};
 		F53670992B88B0130050D4A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF74F70763DE69C58E77BEBF /* Pods-CustomTabBarNavigation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -445,6 +559,7 @@
 		};
 		F536709A2B88B0130050D4A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 748DDB483D6A175038C80DB2 /* Pods-CustomTabBarNavigation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -474,6 +589,7 @@
 		};
 		F536709C2B88B0130050D4A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 216E90B3FF845DD38D60D787 /* Pods-CustomTabBarNavigationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +610,7 @@
 		};
 		F536709D2B88B0130050D4A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A63DB5A7551FF46FBD21764 /* Pods-CustomTabBarNavigationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +631,7 @@
 		};
 		F536709F2B88B0130050D4A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3123E0C70CA2F868D2CDFCE /* Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +650,7 @@
 		};
 		F53670A02B88B0130050D4A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 487DC75F577725C945539742 /* Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
