@@ -8,14 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    //    @StateObject var tabVM: TabViewModel = .init()
+    @State var isOne: Bool = true
+    @State var isTwo: Bool = true
+    @Namespace var namespace
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Color.blue
+            VStack {
+                Spacer()
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.red)
+                    .onTapGesture {
+                        withAnimation(.easeInOut(duration: 0.5)) {
+                            isOne.toggle()
+                        }
+                    }
+                Text("Hello, world!")
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.red)
+                    .onTapGesture {
+                        withAnimation(.easeInOut(duration: 0.5)) {
+                            isTwo.toggle()
+                        }
+                    }
+                Spacer()
+            }
+            VStack {
+                Spacer()
+                
+                if isTwo {
+                    CustomTabBarVew(isOne: $isOne)
+                        .transition(.offset(y: 100))
+                }
+                
+            }
+            .padding()
         }
-        .padding()
+        .ignoresSafeArea()
     }
 }
 

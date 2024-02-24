@@ -42,11 +42,11 @@
 		6BB58D83FF4A729E65DE098BDEF66A06 /* Pods-CustomTabBarNavigationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomTabBarNavigationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7901EE0D48546C0721ADE6B2B8819E3A /* Pods-CustomTabBarNavigation-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomTabBarNavigation-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7AED76B9E5AB1926ABD002DE48B1323B /* Pods-CustomTabBarNavigation */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CustomTabBarNavigation"; path = Pods_CustomTabBarNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AED76B9E5AB1926ABD002DE48B1323B /* Pods_CustomTabBarNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTabBarNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BFFB75607F30326C4193F026425F39 /* Pods-CustomTabBarNavigation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomTabBarNavigation-Info.plist"; sourceTree = "<group>"; };
 		8D32F50DD7A932F62ADED61E325C8905 /* Pods-CustomTabBarNavigation-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomTabBarNavigation-acknowledgements.plist"; sourceTree = "<group>"; };
 		9AB021C6896E95DADF6220F87B67F1E3 /* Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A50C412B8A98B752A32BC807C8BDBD9A /* Pods-CustomTabBarNavigationTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CustomTabBarNavigationTests"; path = Pods_CustomTabBarNavigationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD137D12C10D5A32862FA0BAFB9CF8B7 /* Pods-CustomTabBarNavigationTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomTabBarNavigationTests-Info.plist"; sourceTree = "<group>"; };
 		B1E6F0FA6F060A4DACF4B3EB90315362 /* Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests-Info.plist"; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		00E2F0F35F514F5D3117CFA42125E04B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7AED76B9E5AB1926ABD002DE48B1323B /* Pods-CustomTabBarNavigation */,
+				7AED76B9E5AB1926ABD002DE48B1323B /* Pods_CustomTabBarNavigation.framework */,
 				44677A17DF9DAFD22A9174A2E61AF497 /* Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests */,
 				A50C412B8A98B752A32BC807C8BDBD9A /* Pods-CustomTabBarNavigationTests */,
 			);
@@ -245,7 +245,7 @@
 			);
 			name = "Pods-CustomTabBarNavigation";
 			productName = Pods_CustomTabBarNavigation;
-			productReference = 7AED76B9E5AB1926ABD002DE48B1323B /* Pods-CustomTabBarNavigation */;
+			productReference = 7AED76B9E5AB1926ABD002DE48B1323B /* Pods_CustomTabBarNavigation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FE46DF497A5C2C2E680C2A173606CBF3 /* Pods-CustomTabBarNavigationTests */ = {

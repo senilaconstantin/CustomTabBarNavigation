@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1C3F95DC98E2D8AACD766FFF /* Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB200E88C333C22D6513E41 /* Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework */; };
 		7CE74686479904046B981837 /* Pods_CustomTabBarNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517DED543895CC53D88DE27B /* Pods_CustomTabBarNavigation.framework */; };
+		F52D9DCD2B8A024D00197228 /* CustomTabBarVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D9DCC2B8A024D00197228 /* CustomTabBarVew.swift */; };
+		F52D9DD32B8A03A200197228 /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D9DD22B8A03A200197228 /* TabItems.swift */; };
+		F52D9DD52B8A092200197228 /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D9DD42B8A092200197228 /* TabViewModel.swift */; };
+		F52D9DD72B8A431000197228 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D9DD62B8A431000197228 /* AppConstants.swift */; };
 		F53670782B88B0110050D4A5 /* CustomTabBarNavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670772B88B0110050D4A5 /* CustomTabBarNavigationApp.swift */; };
 		F536707A2B88B0110050D4A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670792B88B0110050D4A5 /* ContentView.swift */; };
 		F536707C2B88B0130050D4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F536707B2B88B0130050D4A5 /* Assets.xcassets */; };
@@ -46,6 +50,10 @@
 		A3123E0C70CA2F868D2CDFCE /* Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.debug.xcconfig"; path = "Target Support Files/Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests/Pods-CustomTabBarNavigation-CustomTabBarNavigationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACB200E88C333C22D6513E41 /* Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF74F70763DE69C58E77BEBF /* Pods-CustomTabBarNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarNavigation.debug.xcconfig"; path = "Target Support Files/Pods-CustomTabBarNavigation/Pods-CustomTabBarNavigation.debug.xcconfig"; sourceTree = "<group>"; };
+		F52D9DCC2B8A024D00197228 /* CustomTabBarVew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVew.swift; sourceTree = "<group>"; };
+		F52D9DD22B8A03A200197228 /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
+		F52D9DD42B8A092200197228 /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
+		F52D9DD62B8A431000197228 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F53670742B88B0110050D4A5 /* CustomTabBarNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTabBarNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53670772B88B0110050D4A5 /* CustomTabBarNavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarNavigationApp.swift; sourceTree = "<group>"; };
 		F53670792B88B0110050D4A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,8 +114,64 @@
 				216E90B3FF845DD38D60D787 /* Pods-CustomTabBarNavigationTests.debug.xcconfig */,
 				7A63DB5A7551FF46FBD21764 /* Pods-CustomTabBarNavigationTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F52D9DC92B88C66D00197228 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F52D9DD62B8A431000197228 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F52D9DCA2B88C67800197228 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F52D9DCE2B8A02C200197228 /* TabBar */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F52D9DCB2B88C68400197228 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F52D9DCE2B8A02C200197228 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F52D9DD12B8A02EE00197228 /* ViewModel */,
+				F52D9DD02B8A02E700197228 /* Model */,
+				F52D9DCF2B8A02DE00197228 /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		F52D9DCF2B8A02DE00197228 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F52D9DCC2B8A024D00197228 /* CustomTabBarVew.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F52D9DD02B8A02E700197228 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F52D9DD22B8A03A200197228 /* TabItems.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F52D9DD12B8A02EE00197228 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F52D9DD42B8A092200197228 /* TabViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F536706B2B88B0110050D4A5 = {
@@ -135,6 +199,9 @@
 		F53670762B88B0110050D4A5 /* CustomTabBarNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				F52D9DCB2B88C68400197228 /* Services */,
+				F52D9DCA2B88C67800197228 /* Features */,
+				F52D9DC92B88C66D00197228 /* Constants */,
 				F53670772B88B0110050D4A5 /* CustomTabBarNavigationApp.swift */,
 				F53670792B88B0110050D4A5 /* ContentView.swift */,
 				F536707B2B88B0130050D4A5 /* Assets.xcassets */,
@@ -370,8 +437,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52D9DCD2B8A024D00197228 /* CustomTabBarVew.swift in Sources */,
+				F52D9DD72B8A431000197228 /* AppConstants.swift in Sources */,
 				F536707A2B88B0110050D4A5 /* ContentView.swift in Sources */,
+				F52D9DD32B8A03A200197228 /* TabItems.swift in Sources */,
 				F53670782B88B0110050D4A5 /* CustomTabBarNavigationApp.swift in Sources */,
+				F52D9DD52B8A092200197228 /* TabViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
