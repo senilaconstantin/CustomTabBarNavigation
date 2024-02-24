@@ -11,7 +11,6 @@ struct ContentView: View {
     //    @StateObject var tabVM: TabViewModel = .init()
     @State var isOne: Bool = true
     @State var isTwo: Bool = true
-    @Namespace var namespace
     var body: some View {
         ZStack {
             Color.blue
@@ -40,7 +39,7 @@ struct ContentView: View {
                 Spacer()
                 
                 if isTwo {
-                    CustomTabBarVew(isOne: $isOne)
+                    CustomTabBarVew(isEditMode: $isOne)
                         .transition(.offset(y: 100))
                 }
                 

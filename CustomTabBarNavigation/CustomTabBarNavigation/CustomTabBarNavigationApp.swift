@@ -11,7 +11,8 @@ import SwiftUI
 struct CustomTabBarNavigationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBarPages()
+//            ContentView()
         }
     }
 }

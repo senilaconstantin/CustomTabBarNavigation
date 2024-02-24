@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct CustomTabBarVew: View {
-    @Binding var isOne: Bool
-    @StateObject var tabVM: TabViewModel = .init()
+    @Binding var isEditMode: Bool
+    @EnvironmentObject var tabVM: TabViewModel
     var body: some View {
         VStack {
             HStack {
                 HStack {
                     Spacer()
-                    if isOne {
+                    if isEditMode {
                         ForEach(Tab.allCases, id: \.rawValue) { tab in
                             Spacer()
                             Button(action: {
-                                withAnimation(.easeIn(duration: 0.1)) {
+                                withAnimation() {
                                     tabVM.changeSelected(tab: tab)
                                 }
                             }) {
@@ -41,9 +41,10 @@ struct CustomTabBarVew: View {
                                 }
                             }) {
                                 Image (systemName: tab.toString())
+                                    .font(.system(size: 24))
                                     .foregroundColor(tabVM.isSelectedSecond(tab: tab) ? .blue : tab.getColor())
                                     .scaleEffect (tabVM.isSelectedSecond(tab: tab) ? 1.1 : 1.0)
-                                    .font(.system(size: 24))
+                                    
                                 
                             }
                             
@@ -54,16 +55,15 @@ struct CustomTabBarVew: View {
                     
                     Spacer()
                 }
-                .frame(width: nil, height: 60)
+                .frame(width: nil, height: 80)
                 .background(.white) // .thinMaterial
-                .cornerRadius (10)
-                .padding()
+                .cornerRadius (17)
             }
         }
     }
 }
 
 
-#Preview {
-    CustomTabBarVew(isOne: .constant(true))
-}
+//#Preview {
+//    CustomTabBarVew(isOne: .constant(true))
+//}
