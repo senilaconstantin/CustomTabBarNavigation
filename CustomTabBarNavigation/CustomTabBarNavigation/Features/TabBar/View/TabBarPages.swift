@@ -45,21 +45,6 @@ struct TabBarPages: View {
                     .tag(Tab.profile)
             
         }
-        .animation(.easeInOut(duration: 0.3), value: tabVM.selectedTab)
-        .transition(.slide)
-//        TabView(selection: $tabVM.selectedTab) {
-//                HomeView(isPushNext: $isPushNext)
-////                    .transition(.offset(x: AppConstants.ScreenSize.width * (-1)))
-//                    .tag(Tab.home)
-//                SearchView()
-//                    .tag(Tab.search)
-//                HistoryView(isEditMode: $isEditMode)
-////                    .transition(.offset(x: AppConstants.ScreenSize.width))
-//                    .tag(Tab.edit)
-//                ProfileView()
-//                    .tag(Tab.profile)
-//            
-//        }
     }
 }
 
