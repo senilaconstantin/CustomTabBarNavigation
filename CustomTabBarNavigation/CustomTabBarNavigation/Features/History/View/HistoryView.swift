@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HistoryView: View {
-    @Binding var isEditMode: Bool
+    @EnvironmentObject var tabVM: TabViewModel
+    
     var body: some View {
         ZStack {
             Color.white
@@ -16,18 +17,18 @@ struct HistoryView: View {
             VStack {
                 Text("History")
                     .cardTextStyle(size: 30, weight: .bold, color: .black)
-                if !isEditMode {
+                if !tabVM.isEditMode {
                     Text("Edit mode on")
                         .cardTextStyle(size: 17, weight: .light, color: .black)
                 }
                 
                 Button(action: {
-                    withAnimation{
-                        isEditMode.toggle()
+                    withAnimation(.easeInOut(duration: 0.5)){
+                        tabVM.isEditMode.toggle()
                     }
                 }) {
                     HStack{
-                        Text("Edit")
+                        Text(tabVM.isEditMode ? "Edit" : "Save")
                             .cardTextStyle(size: 17, weight: .light, color: .blue)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 8)
@@ -38,9 +39,28 @@ struct HistoryView: View {
             }
         }
         .ignoresSafeArea()
+        .overlay(
+            VStack {
+                NotificationView(message: tabVM.notificationMessage)
+                    .opacity(tabVM.notificationVisible ? 1 : 0)
+                Spacer()
+            }
+            .padding(.horizontal, 24)
+        )
     }
 }
 
-#Preview {
-    HistoryView(isEditMode: .constant(false))
+struct NotificationView: View {
+    var message: String
+    
+    var body: some View {
+        HStack {
+            Spacer()
+            Text(message)
+                .padding()
+            Spacer()
+        }
+        .background(.thinMaterial)
+        .cornerRadius(8)
+    }
 }

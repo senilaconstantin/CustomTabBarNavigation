@@ -12,6 +12,11 @@ struct ProfileView: View {
         ZStack {
             Color.white
             Color.orange.opacity(0.5)
+            VStack {
+                Text("Profile")
+                    .cardTextStyle(size: 30, weight: .bold, color: .black)
+                    .padding([.top], 15)
+            }
         }
         .ignoresSafeArea()
     }

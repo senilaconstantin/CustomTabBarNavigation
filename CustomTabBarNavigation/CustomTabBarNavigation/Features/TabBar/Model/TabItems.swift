@@ -10,7 +10,7 @@ import SwiftUI
 enum Tab: String, CaseIterable {
     case home
     case search
-    case edit
+    case history
     case profile
     
     func toString() -> String {
@@ -19,7 +19,7 @@ enum Tab: String, CaseIterable {
             return "house.fill"
         case .search:
             return "magnifyingglass"
-        case .edit:
+        case .history:
             return "clock"
         case .profile:
             return "person.fill"
@@ -51,6 +51,8 @@ enum SecondTab: String, CaseIterable {
         switch self {
         case .delete:
             return .red
+        case .favourite:
+            return .yellow
         default:
             return .gray
         }

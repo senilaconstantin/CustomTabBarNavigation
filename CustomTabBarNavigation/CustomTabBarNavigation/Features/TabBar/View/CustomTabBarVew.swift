@@ -24,46 +24,39 @@ struct CustomTabBarVew: View {
                                 }
                             }) {
                                 Image (systemName: tab.toString())
-                                    .foregroundColor(tabVM.isSelected(tab: tab) ? .blue : .gray)
-                                    .scaleEffect (tabVM.isSelected(tab: tab) ? 1.1 : 1.0)
-                                    .font(.system(size: 24))
+                                    .tabButtonStyle(size: 24,
+                                                    scaleEffect: tabVM.isSelected(tab: tab) ? 1.1 : 1.0,
+                                                    color: tabVM.isSelected(tab: tab) ? .blue : .gray)
                             }
                             
                             Spacer()
                         }
-                        .transition(.offset(x: AppConstants.ScreenSize.width * (-1)))
+                        .transition(.offset(x: -AppConstants.ScreenSize.width + 50))
                     } else {
                         ForEach(SecondTab.allCases, id: \.rawValue) { tab in
                             Spacer()
                             Button(action: {
-                                withAnimation(.easeIn(duration: 0.1)) {
+                                withAnimation(.easeIn(duration: 0.5)) {
                                     tabVM.changeSelectedSecond(tab: tab)
                                 }
                             }) {
                                 Image (systemName: tab.toString())
-                                    .font(.system(size: 24))
-                                    .foregroundColor(tabVM.isSelectedSecond(tab: tab) ? .blue : tab.getColor())
-                                    .scaleEffect (tabVM.isSelectedSecond(tab: tab) ? 1.1 : 1.0)
-                                    
-                                
+                                    .tabButtonStyle(size: 24,
+                                                    scaleEffect: tabVM.isSelectedSecond(tab: tab) ? 1.1 : 1.0,
+                                                    color: tab.getColor())
                             }
                             
                             Spacer()
                         }
-                        .transition(.offset(x: AppConstants.ScreenSize.width))
+                        .transition(.offset(x: AppConstants.ScreenSize.width - 50))
                     }
                     
                     Spacer()
                 }
                 .frame(width: nil, height: 80)
-                .background(.white) // .thinMaterial
+                .background(.white) 
                 .cornerRadius (17)
             }
         }
     }
 }
-
-
-//#Preview {
-//    CustomTabBarVew(isOne: .constant(true))
-//}

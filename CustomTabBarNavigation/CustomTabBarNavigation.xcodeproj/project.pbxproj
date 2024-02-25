@@ -27,6 +27,7 @@
 		F53670932B88B0130050D4A5 /* CustomTabBarNavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670922B88B0130050D4A5 /* CustomTabBarNavigationUITests.swift */; };
 		F53670952B88B0130050D4A5 /* CustomTabBarNavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670942B88B0130050D4A5 /* CustomTabBarNavigationUITestsLaunchTests.swift */; };
 		F59BA5962B8A83B10035D599 /* CardTextViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BA5952B8A83B10035D599 /* CardTextViewModifier.swift */; };
+		F59BA59B2B8B905D0035D599 /* TabButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BA59A2B8B905D0035D599 /* TabButtonViewModifier.swift */; };
 		F8E69A4ABFDAE0F4F7F5FDF5 /* Pods_CustomTabBarNavigationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E0440B16A137B3B61668C3 /* Pods_CustomTabBarNavigationTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		F53670922B88B0130050D4A5 /* CustomTabBarNavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarNavigationUITests.swift; sourceTree = "<group>"; };
 		F53670942B88B0130050D4A5 /* CustomTabBarNavigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarNavigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F59BA5952B8A83B10035D599 /* CardTextViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTextViewModifier.swift; sourceTree = "<group>"; };
+		F59BA59A2B8B905D0035D599 /* TabButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,9 +144,10 @@
 		F52D9DCA2B88C67800197228 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F59BA5972B8B8F4A0035D599 /* CustomView */,
 				F59BA5942B8A838B0035D599 /* ViewModifiers */,
 				F52D9DE12B8A583E00197228 /* Profile */,
-				F52D9DE02B8A582E00197228 /* Edit */,
+				F52D9DE02B8A582E00197228 /* History */,
 				F52D9DDF2B8A581F00197228 /* Search */,
 				F52D9DDE2B8A581400197228 /* Home */,
 				F52D9DCE2B8A02C200197228 /* TabBar */,
@@ -214,14 +217,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		F52D9DE02B8A582E00197228 /* Edit */ = {
+		F52D9DE02B8A582E00197228 /* History */ = {
 			isa = PBXGroup;
 			children = (
 				F52D9DEA2B8A589B00197228 /* Model */,
 				F52D9DE92B8A589300197228 /* ViewModel */,
 				F52D9DE82B8A588A00197228 /* View */,
 			);
-			path = Edit;
+			path = History;
 			sourceTree = "<group>";
 		};
 		F52D9DE12B8A583E00197228 /* Profile */ = {
@@ -388,8 +391,16 @@
 			isa = PBXGroup;
 			children = (
 				F59BA5952B8A83B10035D599 /* CardTextViewModifier.swift */,
+				F59BA59A2B8B905D0035D599 /* TabButtonViewModifier.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		F59BA5972B8B8F4A0035D599 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,6 +613,7 @@
 				F536707A2B88B0110050D4A5 /* ContentView.swift in Sources */,
 				F52D9DD32B8A03A200197228 /* TabItems.swift in Sources */,
 				F59BA5962B8A83B10035D599 /* CardTextViewModifier.swift in Sources */,
+				F59BA59B2B8B905D0035D599 /* TabButtonViewModifier.swift in Sources */,
 				F52D9DF32B8A58F600197228 /* HistoryView.swift in Sources */,
 				F52D9DEF2B8A58D200197228 /* HomeView.swift in Sources */,
 				F53670782B88B0110050D4A5 /* CustomTabBarNavigationApp.swift in Sources */,

@@ -12,6 +12,11 @@ struct SearchView: View {
         ZStack {
             Color.white
             Color.green.opacity(0.5)
+            VStack {
+                Text("Search")
+                    .cardTextStyle(size: 30, weight: .bold, color: .black)
+                    .padding([.top], 15)
+            }
         }
         .ignoresSafeArea()
     }

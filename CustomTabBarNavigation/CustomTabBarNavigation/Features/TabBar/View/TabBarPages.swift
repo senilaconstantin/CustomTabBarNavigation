@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct TabBarPages: View {
-    @State var isEditMode: Bool = true
     @State var isPushNext: Bool = true
     @StateObject var tabVM: TabViewModel = .init()
-    init() {
-        UITabBar.appearance().isHidden = true
-    }
+//    init() {
+//        UITabBar.appearance().isHidden = true
+//    }
     var body: some View {
         ZStack {
             manageView
@@ -21,10 +20,9 @@ struct TabBarPages: View {
             VStack {
                 Spacer()
                 if isPushNext {
-                    CustomTabBarVew(isEditMode: $isEditMode)
+                    CustomTabBarVew(isEditMode: $tabVM.isEditMode)
                         .environmentObject(tabVM)
                         .transition(.offset(y: 150))
-                        
                 }
             }
             .padding(.horizontal, 24)
@@ -32,18 +30,33 @@ struct TabBarPages: View {
     }
     
     private var manageView: some View {
-        TabView(selection: $tabVM.selectedTab) {
-                HomeView(isPushNext: $isPushNext)
-//                    .transition(.offset(x: AppConstants.ScreenSize.width * (-1)))
-                    .tag(Tab.home)
-                SearchView()
-                    .tag(Tab.search)
-                HistoryView(isEditMode: $isEditMode)
-//                    .transition(.offset(x: AppConstants.ScreenSize.width))
-                    .tag(Tab.edit)
-                ProfileView()
-                    .tag(Tab.profile)
+        ZStack {
+            HomeView(isPushNext: $isPushNext)
+                .offset(x: tabVM.selectedTab == .search ? -AppConstants.ScreenSize.width : 0)
+                .offset(x: tabVM.selectedTab == .history ? -AppConstants.ScreenSize.width : 0)
+                .offset(x: tabVM.selectedTab == .profile ? -AppConstants.ScreenSize.width : 0)
+                .opacity(tabVM.selectedTab == .home || tabVM.lastSelectedTab == .home ? 1 : 0)
             
+            SearchView()
+                .offset(x: tabVM.selectedTab == .home ? AppConstants.ScreenSize.width : 0)
+                .offset(x: tabVM.selectedTab == .history ? -AppConstants.ScreenSize.width : 0)
+                .offset(x: tabVM.selectedTab == .profile ? -AppConstants.ScreenSize.width : 0)
+                .opacity(tabVM.selectedTab == .search || tabVM.lastSelectedTab == .search ? 1 : 0)
+            
+            
+            HistoryView()
+                .environmentObject(tabVM)
+                .offset(x: tabVM.selectedTab == .home ? AppConstants.ScreenSize.width : 0)
+                .offset(x: tabVM.selectedTab == .search ? AppConstants.ScreenSize.width : 0)
+                .offset(x: tabVM.selectedTab == .profile ? -AppConstants.ScreenSize.width : 0)
+                .opacity(tabVM.selectedTab == .history || tabVM.lastSelectedTab == .history ? 1 : 0)
+            
+            
+            ProfileView()
+                .offset(x: tabVM.selectedTab == .home ? AppConstants.ScreenSize.width : 0)
+                .offset(x: tabVM.selectedTab == .search ? AppConstants.ScreenSize.width : 0)
+                .offset(x: tabVM.selectedTab == .history ? AppConstants.ScreenSize.width : 0)
+                .opacity(tabVM.selectedTab == .profile || tabVM.lastSelectedTab == .profile ? 1 : 0)
         }
     }
 }
