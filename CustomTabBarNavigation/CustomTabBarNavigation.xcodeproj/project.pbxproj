@@ -20,7 +20,6 @@
 		F52D9DF52B8A590500197228 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D9DF42B8A590500197228 /* ProfileView.swift */; };
 		F52D9DF72B8A740F00197228 /* NextScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D9DF62B8A740F00197228 /* NextScreenView.swift */; };
 		F53670782B88B0110050D4A5 /* CustomTabBarNavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670772B88B0110050D4A5 /* CustomTabBarNavigationApp.swift */; };
-		F536707A2B88B0110050D4A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670792B88B0110050D4A5 /* ContentView.swift */; };
 		F536707C2B88B0130050D4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F536707B2B88B0130050D4A5 /* Assets.xcassets */; };
 		F536707F2B88B0130050D4A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F536707E2B88B0130050D4A5 /* Preview Assets.xcassets */; };
 		F53670892B88B0130050D4A5 /* CustomTabBarNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670882B88B0130050D4A5 /* CustomTabBarNavigationTests.swift */; };
@@ -70,7 +69,6 @@
 		F52D9DF62B8A740F00197228 /* NextScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextScreenView.swift; sourceTree = "<group>"; };
 		F53670742B88B0110050D4A5 /* CustomTabBarNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTabBarNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53670772B88B0110050D4A5 /* CustomTabBarNavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarNavigationApp.swift; sourceTree = "<group>"; };
-		F53670792B88B0110050D4A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F536707B2B88B0130050D4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F536707E2B88B0130050D4A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F53670842B88B0130050D4A5 /* CustomTabBarNavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomTabBarNavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,7 +353,6 @@
 				F52D9DCA2B88C67800197228 /* Features */,
 				F52D9DC92B88C66D00197228 /* Constants */,
 				F53670772B88B0110050D4A5 /* CustomTabBarNavigationApp.swift */,
-				F53670792B88B0110050D4A5 /* ContentView.swift */,
 				F536707B2B88B0130050D4A5 /* Assets.xcassets */,
 				F536707D2B88B0130050D4A5 /* Preview Content */,
 			);
@@ -610,7 +607,6 @@
 				F52D9DF12B8A58E700197228 /* SearchView.swift in Sources */,
 				F52D9DCD2B8A024D00197228 /* CustomTabBarVew.swift in Sources */,
 				F52D9DD72B8A431000197228 /* AppConstants.swift in Sources */,
-				F536707A2B88B0110050D4A5 /* ContentView.swift in Sources */,
 				F52D9DD32B8A03A200197228 /* TabItems.swift in Sources */,
 				F59BA5962B8A83B10035D599 /* CardTextViewModifier.swift in Sources */,
 				F59BA59B2B8B905D0035D599 /* TabButtonViewModifier.swift in Sources */,

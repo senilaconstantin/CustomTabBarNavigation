@@ -12,7 +12,6 @@ struct CustomTabBarNavigationApp: App {
     var body: some Scene {
         WindowGroup {
             TabBarPages()
-//            ContentView()
         }
     }
 }
