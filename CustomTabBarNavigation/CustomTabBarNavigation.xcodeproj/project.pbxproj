@@ -27,6 +27,7 @@
 		F53670952B88B0130050D4A5 /* CustomTabBarNavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670942B88B0130050D4A5 /* CustomTabBarNavigationUITestsLaunchTests.swift */; };
 		F59BA5962B8A83B10035D599 /* CardTextViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BA5952B8A83B10035D599 /* CardTextViewModifier.swift */; };
 		F59BA59B2B8B905D0035D599 /* TabButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BA59A2B8B905D0035D599 /* TabButtonViewModifier.swift */; };
+		F5D15C2B2B8CE29E00DB1657 /* ButtonAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D15C2A2B8CE29E00DB1657 /* ButtonAppView.swift */; };
 		F8E69A4ABFDAE0F4F7F5FDF5 /* Pods_CustomTabBarNavigationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E0440B16A137B3B61668C3 /* Pods_CustomTabBarNavigationTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		F53670942B88B0130050D4A5 /* CustomTabBarNavigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarNavigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F59BA5952B8A83B10035D599 /* CardTextViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTextViewModifier.swift; sourceTree = "<group>"; };
 		F59BA59A2B8B905D0035D599 /* TabButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonViewModifier.swift; sourceTree = "<group>"; };
+		F5D15C2A2B8CE29E00DB1657 /* ButtonAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAppView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +398,7 @@
 		F59BA5972B8B8F4A0035D599 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				F5D15C2A2B8CE29E00DB1657 /* ButtonAppView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				F52D9DCD2B8A024D00197228 /* CustomTabBarVew.swift in Sources */,
 				F52D9DD72B8A431000197228 /* AppConstants.swift in Sources */,
 				F52D9DD32B8A03A200197228 /* TabItems.swift in Sources */,
+				F5D15C2B2B8CE29E00DB1657 /* ButtonAppView.swift in Sources */,
 				F59BA5962B8A83B10035D599 /* CardTextViewModifier.swift in Sources */,
 				F59BA59B2B8B905D0035D599 /* TabButtonViewModifier.swift in Sources */,
 				F52D9DF32B8A58F600197228 /* HistoryView.swift in Sources */,

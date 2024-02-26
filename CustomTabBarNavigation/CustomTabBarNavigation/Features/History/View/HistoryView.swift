@@ -27,14 +27,7 @@ struct HistoryView: View {
                         tabVM.editAction()
                     }
                 }) {
-                    HStack{
-                        Text(tabVM.isEditMode ? "Edit" : "Save")
-                            .cardTextStyle(size: 17, weight: .light, color: .blue)
-                            .padding(.horizontal, 12)
-                            .padding(.vertical, 8)
-                    }
-                    .background(Color.gray.opacity(0.7))
-                    .cornerRadius(12)
+                    ButtonAppView(titleButton: tabVM.isEditMode ? "Edit" : "Save")
                 }
             }
         }

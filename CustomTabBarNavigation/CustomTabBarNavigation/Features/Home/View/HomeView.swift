@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Binding var isPushNext: Bool
+    @Binding var isHiddenTabBar: Bool
     var body: some View {
         NavigationView {
             ZStack {
@@ -21,21 +21,14 @@ struct HomeView: View {
                         .padding([.top], 15)
                     
                     NavigationLink {
-                        NextScreenView(isPushNext: $isPushNext)
+                        NextScreenView(isHiddenTabBar: $isHiddenTabBar)
                             .onAppear {
                                 withAnimation(.easeInOut(duration: 0.1)) {
-                                    isPushNext.toggle()
+                                    isHiddenTabBar.toggle()
                                 }
                             }
                     } label: {
-                        HStack{
-                            Text("Push Next")
-                                .cardTextStyle(size: 17, weight: .light, color: .blue)
-                                .padding(.horizontal, 12)
-                                .padding(.vertical, 8)
-                        }
-                        .background(Color.gray.opacity(0.7))
-                        .cornerRadius(12)
+                        ButtonAppView(titleButton: "Push Next")
                     }
                 }
             }
@@ -46,5 +39,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView(isPushNext: .constant(true))
+    HomeView(isHiddenTabBar: .constant(true))
 }

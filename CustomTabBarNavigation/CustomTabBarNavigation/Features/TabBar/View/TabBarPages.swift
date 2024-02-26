@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct TabBarPages: View {
-    @State var isPushNext: Bool = true
+    @State var isHiddenTabBar: Bool = true
     @StateObject var tabVM: TabViewModel = .init()
-    //    init() {
-    //        UITabBar.appearance().isHidden = true
-    //    }
+
     var body: some View {
         ZStack {
             manageView
             
             VStack {
                 Spacer()
-                if isPushNext {
+                if isHiddenTabBar {
                     CustomTabBarVew()
                         .environmentObject(tabVM)
                         .transition(.offset(y: 150))
@@ -33,7 +31,7 @@ struct TabBarPages: View {
         Group {
             switch tabVM.selectedTab {
             case .home:
-                HomeView(isPushNext: $isPushNext)
+                HomeView(isHiddenTabBar: $isHiddenTabBar)
                 
             case .search:
                 SearchView()

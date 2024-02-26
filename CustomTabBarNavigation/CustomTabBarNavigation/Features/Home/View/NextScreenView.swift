@@ -8,26 +8,20 @@
 import SwiftUI
 
 struct NextScreenView: View {
-    @Binding var isPushNext: Bool
+    @Binding var isHiddenTabBar: Bool
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack {
-            Color.orange
+            Color.white
+            Color.pink.opacity(0.4)
             VStack {
                 Button(action: {
                     presentationMode.wrappedValue.dismiss()
                     withAnimation(.easeInOut(duration: 0.1)) {
-                        isPushNext.toggle()
+                        isHiddenTabBar.toggle()
                     }
                 }) {
-                    HStack{
-                        Text("Back")
-                            .cardTextStyle(size: 17, weight: .light, color: .blue)
-                            .padding(.horizontal, 12)
-                            .padding(.vertical, 8)
-                    }
-                    .background(Color.gray.opacity(0.7))
-                    .cornerRadius(12)
+                    ButtonAppView(titleButton: "Back")
                 }
             }
         }
@@ -37,5 +31,5 @@ struct NextScreenView: View {
 }
 
 #Preview {
-    NextScreenView(isPushNext: .constant(true))
+    NextScreenView(isHiddenTabBar: .constant(true))
 }
