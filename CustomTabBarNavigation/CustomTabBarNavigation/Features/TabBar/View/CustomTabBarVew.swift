@@ -13,7 +13,7 @@ struct CustomTabBarVew: View {
         VStack {
             HStack {
                 Spacer()
-                switch tabVM.isEditMode {
+                switch tabVM.isPrincipalTab {
                 case true:
                     mainTabBar
                 case false:

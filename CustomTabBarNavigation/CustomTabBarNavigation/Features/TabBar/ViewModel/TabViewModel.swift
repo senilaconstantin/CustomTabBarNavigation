@@ -13,7 +13,7 @@ class TabViewModel: ObservableObject {
     
     @Published var isPushingFromLeft = false
     
-    @Published var isEditMode: Bool = true
+    @Published var isPrincipalTab: Bool = true
     
     @Published var notificationVisible: Bool = false
     var notificationMessage = ""
@@ -22,6 +22,12 @@ class TabViewModel: ObservableObject {
         selectedTab = .home
         selectedEditTab = .delete
     }
+   
+//    func getTransitionTab() -> Double {
+//        let xTransitionTab: Double = -AppConstants.ScreenSize.width + 50
+//       
+//        return isPrincipalTab ? xTransitionTab : -xTransitionTab
+//    }
     
     func isSelected(tab: Tab) -> Bool{
         return tab == selectedTab
@@ -55,20 +61,20 @@ class TabViewModel: ObservableObject {
     func isSelectedButtonEditTab(tab: SecondTab) -> Bool{
         return tab == selectedEditTab
     }
-
+    
     func editAction() {
-        if isEditMode {
+        if isPrincipalTab {
             print("Pressed Edit")
         } else {
             print("Pressed Save")
         }
-        isEditMode.toggle()
+        isPrincipalTab.toggle()
     }
     
     func changeSelectedSecond(tab: SecondTab) {
         switch tab {
         case .back:
-            isEditMode.toggle()
+            isPrincipalTab.toggle()
         case .delete:
             notificationMessage = "The delete button was pressed."
             showNotification()

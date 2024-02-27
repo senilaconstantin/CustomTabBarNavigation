@@ -7,7 +7,12 @@
 
 import SwiftUI
 
-enum Tab: String, CaseIterable {
+protocol TabItemConvertible: CaseIterable {
+    func toString() -> String
+    func getColor() -> Color
+}
+
+enum Tab: String, TabItemConvertible {
     case home
     case search
     case history
@@ -26,9 +31,12 @@ enum Tab: String, CaseIterable {
             
         }
     }
+    func getColor() -> Color {
+        return .gray
+    }
 }
 
-enum SecondTab: String, CaseIterable {
+enum SecondTab: String, TabItemConvertible {
     case back
     case delete
     case unfavourite
@@ -56,5 +64,11 @@ enum SecondTab: String, CaseIterable {
         default:
             return .gray
         }
+    }
+}
+
+struct GenericStruct<T: CaseIterable & Hashable & TabItemConvertible> {
+    func getAllCases() -> [T] {
+        return Array(T.allCases)
     }
 }
