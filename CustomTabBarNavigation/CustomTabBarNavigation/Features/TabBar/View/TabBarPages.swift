@@ -10,7 +10,8 @@ import SwiftUI
 struct TabBarPages: View {
     @State var isHiddenTabBar: Bool = true
     @StateObject var tabVM: TabViewModel = .init()
-
+    @StateObject var historyVM: HistoryViewModel = .init()
+    
     var body: some View {
         ZStack {
             manageView
@@ -20,7 +21,13 @@ struct TabBarPages: View {
                 if isHiddenTabBar {
                     CustomTabBarVew()
                         .environmentObject(tabVM)
-                        .transition(.offset(y: 150))
+                        .environmentObject(historyVM)
+                        .transition(
+                            .asymmetric(
+                                insertion: .move(edge: .bottom),
+                                removal: .move(edge: .bottom)
+                            )
+                        )
                 }
             }
             .padding(.horizontal, AppConstants.PaddingSize.paddingHorizontal)
@@ -38,7 +45,7 @@ struct TabBarPages: View {
                 
             case .history:
                 HistoryView()
-                    .environmentObject(tabVM)
+                    .environmentObject(historyVM)
                 
             case .profile:
                 ProfileView()

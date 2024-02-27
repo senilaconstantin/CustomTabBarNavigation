@@ -66,9 +66,3 @@ enum SecondTab: String, TabItemConvertible {
         }
     }
 }
-
-struct GenericStruct<T: CaseIterable & Hashable & TabItemConvertible> {
-    func getAllCases() -> [T] {
-        return Array(T.allCases)
-    }
-}
