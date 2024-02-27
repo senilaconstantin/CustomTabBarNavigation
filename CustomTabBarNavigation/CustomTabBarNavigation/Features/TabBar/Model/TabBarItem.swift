@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct TabBarItem {
+    
     let iconName: String
-    let action: () -> Void
+    let color: Color
+//    let action: () -> Void
 }

@@ -14,12 +14,12 @@ struct CustomTabBarVew: View {
         VStack {
             HStack {
                 Spacer()
-                switch historyVM.isPrincipalTab {
-                case true:
+                switch historyVM.tabType {
+                case .mainTab:
                     mainTabBar
-                case false:
+                case .editTab:
                     editTabBar
-                }
+                } 
                 Spacer()
             }
             .frame(height: 80)

@@ -17,7 +17,7 @@ struct HistoryView: View {
             VStack {
                 Text("History")
                     .cardTextStyle(size: 30, weight: .bold, color: .black)
-                if !historyVM.isPrincipalTab {
+                if historyVM.tabType == .editTab {
                     Text("Edit mode on")
                         .cardTextStyle(size: 17, weight: .light, color: .black)
                 }
@@ -27,7 +27,7 @@ struct HistoryView: View {
                         historyVM.editAction()
                     }
                 }) {
-                    ButtonAppView(titleButton: historyVM.isPrincipalTab ? "Edit" : "Save")
+                    ButtonAppView(titleButton: historyVM.getTitleButton())
                 }
             }
         }

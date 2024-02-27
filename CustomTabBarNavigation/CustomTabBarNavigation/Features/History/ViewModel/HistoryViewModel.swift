@@ -9,14 +9,14 @@ import SwiftUI
 
 class HistoryViewModel: ObservableObject {
     @Published var selectedEditTab: SecondTab
-    @Published var isPrincipalTab: Bool
+    @Published var tabType: TabType
     
     @Published var notificationVisible: Bool = false
     var notificationMessage = ""
     
     init() {
         selectedEditTab = .back
-        isPrincipalTab = true
+        tabType = .mainTab
     }
     
     func isSelectedButtonEditTab(tab: SecondTab) -> Bool{
@@ -24,19 +24,21 @@ class HistoryViewModel: ObservableObject {
     }
     
     func editAction() {
-        if isPrincipalTab {
+        switch tabType {
+        case .mainTab:
             print("Pressed Edit")
-        } else {
+            tabType = .editTab
+        case .editTab:
             print("Pressed Save")
+            tabType = .mainTab
         }
-        isPrincipalTab.toggle()
     }
     
     func changeSelected(tab: SecondTab) {
         selectedEditTab = tab
         switch tab {
         case .back:
-            isPrincipalTab.toggle()
+            tabType = .mainTab
         case .delete:
             notificationMessage = "The delete button was pressed."
             showNotification()
@@ -54,5 +56,9 @@ class HistoryViewModel: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.notificationVisible = false
         }
+    }
+    
+    func getTitleButton() -> String {
+        return tabType == .mainTab ? "Edit" : "Save"
     }
 }
