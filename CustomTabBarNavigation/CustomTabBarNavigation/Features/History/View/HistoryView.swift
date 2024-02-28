@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HistoryView: View {
+    @Binding var tabType: TabType
     @EnvironmentObject var historyVM: HistoryViewModel
     
     var body: some View {
@@ -17,17 +18,17 @@ struct HistoryView: View {
             VStack {
                 Text("History")
                     .cardTextStyle(size: 30, weight: .bold, color: .black)
-                if historyVM.tabType == .editTab {
+                if historyVM.isEditMode(tabType: tabType) {
                     Text("Edit mode on")
                         .cardTextStyle(size: 17, weight: .light, color: .black)
                 }
                 
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.5)){
-                        historyVM.editAction()
+                        historyVM.editAction(tabType: $tabType)
                     }
                 }) {
-                    ButtonAppView(titleButton: historyVM.getTitleButton())
+                    ButtonAppView(titleButton: historyVM.getTitleButton(tabType: tabType))
                 }
             }
         }

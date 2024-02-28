@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabBarPages: View {
     @State var isHiddenTabBar: Bool = true
+    @State var tabType: TabType = .mainTab
     @StateObject var tabVM: TabViewModel = .init()
     @StateObject var historyVM: HistoryViewModel = .init()
     
@@ -19,7 +20,7 @@ struct TabBarPages: View {
             VStack {
                 Spacer()
                 if isHiddenTabBar {
-                    CustomTabBarVew()
+                    CustomTabBarVew(tabType: $tabType)
                         .environmentObject(tabVM)
                         .environmentObject(historyVM)
                         .transition(
@@ -44,7 +45,7 @@ struct TabBarPages: View {
                 SearchView()
                 
             case .history:
-                HistoryView()
+                HistoryView(tabType: $tabType)
                     .environmentObject(historyVM)
                 
             case .profile:

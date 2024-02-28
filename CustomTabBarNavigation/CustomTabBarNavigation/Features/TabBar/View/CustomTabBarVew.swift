@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct CustomTabBarVew: View {
+    @Binding var tabType: TabType
     @EnvironmentObject var tabVM: TabViewModel
     @EnvironmentObject var historyVM: HistoryViewModel
+
     var body: some View {
         VStack {
             HStack {
                 Spacer()
-                switch historyVM.tabType {
+                switch tabType {
                 case .mainTab:
                     mainTabBar
                 case .editTab:
@@ -52,7 +54,7 @@ struct CustomTabBarVew: View {
             Spacer()
             Button(action: {
                 withAnimation(.easeIn(duration: 0.5)) {
-                    historyVM.changeSelected(tab: tab)
+                    historyVM.changeSelected(tab: tab, tabType: $tabType)
                 }
             }) {
                 Image (systemName: tab.toString())

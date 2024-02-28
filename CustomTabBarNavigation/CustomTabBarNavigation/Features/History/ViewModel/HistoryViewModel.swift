@@ -9,36 +9,34 @@ import SwiftUI
 
 class HistoryViewModel: ObservableObject {
     @Published var selectedEditTab: SecondTab
-    @Published var tabType: TabType
     
     @Published var notificationVisible: Bool = false
     var notificationMessage = ""
     
     init() {
         selectedEditTab = .back
-        tabType = .mainTab
     }
     
     func isSelectedButtonEditTab(tab: SecondTab) -> Bool{
         return tab == selectedEditTab
     }
     
-    func editAction() {
-        switch tabType {
+    func editAction(tabType: Binding<TabType>) {
+        switch tabType.wrappedValue {
         case .mainTab:
             print("Pressed Edit")
-            tabType = .editTab
+            tabType.wrappedValue = .editTab
         case .editTab:
             print("Pressed Save")
-            tabType = .mainTab
+            tabType.wrappedValue = .mainTab
         }
     }
     
-    func changeSelected(tab: SecondTab) {
+    func changeSelected(tab: SecondTab, tabType: Binding<TabType>) {
         selectedEditTab = tab
         switch tab {
         case .back:
-            tabType = .mainTab
+            tabType.wrappedValue = .mainTab
         case .delete:
             notificationMessage = "The delete button was pressed."
             showNotification()
@@ -58,7 +56,11 @@ class HistoryViewModel: ObservableObject {
         }
     }
     
-    func getTitleButton() -> String {
+    func getTitleButton(tabType: TabType) -> String {
         return tabType == .mainTab ? "Edit" : "Save"
+    }
+    
+    func isEditMode(tabType: TabType) -> Bool {
+        return tabType == .editTab
     }
 }
