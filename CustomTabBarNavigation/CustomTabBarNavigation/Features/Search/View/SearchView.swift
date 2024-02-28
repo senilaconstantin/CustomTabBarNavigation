@@ -11,7 +11,7 @@ struct SearchView: View {
     var body: some View {
         ZStack {
             Color.white
-            Color.green.opacity(0.5)
+            Color.blue.opacity(0.3)
             VStack {
                 Text("Search")
                     .cardTextStyle(size: 30, weight: .bold, color: .black)

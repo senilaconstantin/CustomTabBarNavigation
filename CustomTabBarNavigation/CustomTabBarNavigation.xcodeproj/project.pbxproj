@@ -27,7 +27,7 @@
 		F53670952B88B0130050D4A5 /* CustomTabBarNavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53670942B88B0130050D4A5 /* CustomTabBarNavigationUITestsLaunchTests.swift */; };
 		F59BA5962B8A83B10035D599 /* CardTextViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BA5952B8A83B10035D599 /* CardTextViewModifier.swift */; };
 		F59BA59B2B8B905D0035D599 /* TabButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BA59A2B8B905D0035D599 /* TabButtonViewModifier.swift */; };
-		F5B0A4EE2B8E38C400E3C3DB /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0A4ED2B8E38C400E3C3DB /* TabBarItem.swift */; };
+		F5B0A4EE2B8E38C400E3C3DB /* TabBarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0A4ED2B8E38C400E3C3DB /* TabBarItemModel.swift */; };
 		F5B0A4F02B8E932300E3C3DB /* TabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0A4EF2B8E932300E3C3DB /* TabType.swift */; };
 		F5D15C2B2B8CE29E00DB1657 /* ButtonAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D15C2A2B8CE29E00DB1657 /* ButtonAppView.swift */; };
 		F5D15C2D2B8E07A600DB1657 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D15C2C2B8E07A600DB1657 /* HistoryViewModel.swift */; };
@@ -82,7 +82,7 @@
 		F53670942B88B0130050D4A5 /* CustomTabBarNavigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarNavigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F59BA5952B8A83B10035D599 /* CardTextViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTextViewModifier.swift; sourceTree = "<group>"; };
 		F59BA59A2B8B905D0035D599 /* TabButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonViewModifier.swift; sourceTree = "<group>"; };
-		F5B0A4ED2B8E38C400E3C3DB /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		F5B0A4ED2B8E38C400E3C3DB /* TabBarItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemModel.swift; sourceTree = "<group>"; };
 		F5B0A4EF2B8E932300E3C3DB /* TabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabType.swift; sourceTree = "<group>"; };
 		F5D15C2A2B8CE29E00DB1657 /* ButtonAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAppView.swift; sourceTree = "<group>"; };
 		F5D15C2C2B8E07A600DB1657 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				F52D9DD22B8A03A200197228 /* TabItems.swift */,
-				F5B0A4ED2B8E38C400E3C3DB /* TabBarItem.swift */,
+				F5B0A4ED2B8E38C400E3C3DB /* TabBarItemModel.swift */,
 				F5B0A4EF2B8E932300E3C3DB /* TabType.swift */,
 			);
 			path = Model;
@@ -621,7 +621,7 @@
 				F52D9DD72B8A431000197228 /* AppConstants.swift in Sources */,
 				F52D9DD32B8A03A200197228 /* TabItems.swift in Sources */,
 				F5B0A4F02B8E932300E3C3DB /* TabType.swift in Sources */,
-				F5B0A4EE2B8E38C400E3C3DB /* TabBarItem.swift in Sources */,
+				F5B0A4EE2B8E38C400E3C3DB /* TabBarItemModel.swift in Sources */,
 				F5D15C2B2B8CE29E00DB1657 /* ButtonAppView.swift in Sources */,
 				F59BA5962B8A83B10035D599 /* CardTextViewModifier.swift in Sources */,
 				F59BA59B2B8B905D0035D599 /* TabButtonViewModifier.swift in Sources */,

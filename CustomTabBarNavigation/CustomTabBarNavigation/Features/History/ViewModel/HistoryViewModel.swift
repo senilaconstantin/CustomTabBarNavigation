@@ -8,17 +8,22 @@
 import SwiftUI
 
 class HistoryViewModel: ObservableObject {
-    @Published var selectedEditTab: SecondTab
+    @Published var tabs: [TabBarItemModel]
+    @Published var selectedTab: Int
     
     @Published var notificationVisible: Bool = false
     var notificationMessage = ""
     
     init() {
-        selectedEditTab = .back
+        tabs = [TabBarItemModel(iconName: "arrow.backward"),
+                TabBarItemModel(iconName: "trash.fill", color: .red),
+                TabBarItemModel(iconName: "star.slash.fill"),
+                TabBarItemModel(iconName: "star.fill", color: .yellow)]
+        selectedTab = 0
     }
     
-    func isSelectedButtonEditTab(tab: SecondTab) -> Bool{
-        return tab == selectedEditTab
+    func isSelectedButtonEditTab(tabIndex: Int) -> Bool{
+        return tabIndex == selectedTab
     }
     
     func editAction(tabType: Binding<TabType>) {
@@ -32,20 +37,22 @@ class HistoryViewModel: ObservableObject {
         }
     }
     
-    func changeSelected(tab: SecondTab, tabType: Binding<TabType>) {
-        selectedEditTab = tab
-        switch tab {
-        case .back:
+    func changeSelected(tabIndex: Int, tabType: Binding<TabType>) {
+        selectedTab = tabIndex
+        switch selectedTab {
+        case 0: // back
             tabType.wrappedValue = .mainTab
-        case .delete:
+        case 1: // delete
             notificationMessage = "The delete button was pressed."
             showNotification()
-        case .unfavourite:
+        case 2: // unfavourite
             notificationMessage = "The unfavorite button was pressed."
             showNotification()
-        case .favourite:
+        case 3: // favourite
             notificationMessage = "The favorite button was pressed."
             showNotification()
+        default:
+            print("Edit error")
         }
     }
     

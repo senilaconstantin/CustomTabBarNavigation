@@ -31,17 +31,17 @@ struct CustomTabBarVew: View {
     }
     
     private var mainTabBar: some View {
-        ForEach(Tab.allCases, id: \.rawValue) { tab in
+        ForEach(tabVM.tabs.indices, id: \.self) { index in
             Spacer()
             Button(action: {
                 withAnimation() {
-                    tabVM.changeSelected(tab: tab)
+                    tabVM.changeSelected(tabIndex: index)
                 }
             }) {
-                Image (systemName: tab.toString())
+                Image (systemName: tabVM.tabs[index].iconName)
                     .tabButtonStyle(size: 24,
-                                    scaleEffect: tabVM.isSelected(tab: tab) ? 1.1 : 1.0,
-                                    color: tabVM.isSelected(tab: tab) ? .blue : .gray)
+                                    scaleEffect: tabVM.isSelected(tabIndex: index) ? 1.07 : 1.0,
+                                    color: tabVM.isSelected(tabIndex: index) ? .blue : tabVM.tabs[index].color)
             }
             
             Spacer()
@@ -50,73 +50,21 @@ struct CustomTabBarVew: View {
     }
     
     private var editTabBar: some View {
-        ForEach(SecondTab.allCases, id: \.rawValue) { tab in
+        ForEach(historyVM.tabs.indices, id: \.self) { index in
             Spacer()
             Button(action: {
                 withAnimation(.easeIn(duration: 0.5)) {
-                    historyVM.changeSelected(tab: tab, tabType: $tabType)
+                    historyVM.changeSelected(tabIndex: index, tabType: $tabType)
                 }
             }) {
-                Image (systemName: tab.toString())
+                Image (systemName: historyVM.tabs[index].iconName)
                     .tabButtonStyle(size: 24,
-                                    scaleEffect: historyVM.isSelectedButtonEditTab(tab: tab) ? 1.1 : 1.0,
-                                    color: tab.getColor())
+                                    scaleEffect: historyVM.isSelectedButtonEditTab(tabIndex: index) ? 1.07 : 1.0,
+                                    color: historyVM.tabs[index].color)
             }
             
             Spacer()
         }
         .transition(.offset(x: AppConstants.ScreenSize.width - 50))
     }
-    
 }
-
-
-//struct CustomTabBarVew: View {
-//    @Binding var tabItems: [TabBarItem]
-//
-//    var body: some View {
-//        VStack {
-//            HStack {
-//                Spacer()
-//
-//                mainTabBar
-//
-//                Spacer()
-//            }
-//            .frame(height: 80)
-//            .background(.white)
-//            .cornerRadius (17)
-//        }
-//    }
-//
-//    private var mainTabBar: some View {
-//        ForEach(tabItems.indices, id: \.self) { index in
-//            Spacer()
-//            Button(action: tabItems[index].action) {
-//                Image(systemName: tabItems[index].iconName)
-//                    .tabButtonStyle(size: 24,
-//                                    scaleEffect:  1.0,
-//                                    color: .gray)
-//            }
-//            .tag(index)
-//            Spacer()
-//        }
-//        .transition(.offset(x: -AppConstants.ScreenSize.width + 50))
-////        ForEach(Tab.allCases, id: \.rawValue) { tab in
-////            Spacer()
-////            Button(action: {
-////                withAnimation() {
-////                    tabVM.changeSelected(tab: tab)
-////                }
-////            }) {
-////                Image (systemName: tab.toString())
-////                    .tabButtonStyle(size: 24,
-////                                    scaleEffect: tabVM.isSelected(tab: tab) ? 1.1 : 1.0,
-////                                    color: tabVM.isSelected(tab: tab) ? .blue : .gray)
-////            }
-////
-////            Spacer()
-////        }
-//
-//    }
-//}

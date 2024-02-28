@@ -38,18 +38,20 @@ struct TabBarPages: View {
     private var manageView: some View {
         Group {
             switch tabVM.selectedTab {
-            case .home:
+            case 0: // home
                 HomeView(isHiddenTabBar: $isHiddenTabBar)
                 
-            case .search:
+            case 1: // search
                 SearchView()
                 
-            case .history:
+            case 2: // history
                 HistoryView(tabType: $tabType)
                     .environmentObject(historyVM)
                 
-            case .profile:
+            case 3: // profile
                 ProfileView()
+            default:
+                Text("Error")
             }
         }
         .transition(
