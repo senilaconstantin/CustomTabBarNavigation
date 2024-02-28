@@ -10,9 +10,10 @@ import SwiftUI
 struct TabBarPages: View {
     @State var isHiddenTabBar: Bool = true
     @State var tabType: TabType = .mainTab
+    @State var offsetTabBar = 0.0
     @StateObject var tabVM: TabViewModel = .init()
     @StateObject var historyVM: HistoryViewModel = .init()
-    
+   
     var body: some View {
         ZStack {
             manageView
@@ -29,6 +30,7 @@ struct TabBarPages: View {
                                 removal: .move(edge: .bottom)
                             )
                         )
+                        .offset(y: offsetTabBar)
                 }
             }
             .padding(.horizontal, AppConstants.PaddingSize.paddingHorizontal)
@@ -39,7 +41,7 @@ struct TabBarPages: View {
         Group {
             switch tabVM.selectedTab {
             case 0: // home
-                HomeView(isHiddenTabBar: $isHiddenTabBar)
+                HomeView(isHiddenTabBar: $isHiddenTabBar, offsetTabBar: $offsetTabBar)
                 
             case 1: // search
                 SearchView()

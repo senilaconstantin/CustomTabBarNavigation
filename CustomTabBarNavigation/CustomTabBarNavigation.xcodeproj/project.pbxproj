@@ -10,7 +10,6 @@
 		1C3F95DC98E2D8AACD766FFF /* Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB200E88C333C22D6513E41 /* Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework */; };
 		7CE74686479904046B981837 /* Pods_CustomTabBarNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517DED543895CC53D88DE27B /* Pods_CustomTabBarNavigation.framework */; };
 		F52D9DCD2B8A024D00197228 /* CustomTabBarVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D9DCC2B8A024D00197228 /* CustomTabBarVew.swift */; };
-		F52D9DD32B8A03A200197228 /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D9DD22B8A03A200197228 /* TabItems.swift */; };
 		F52D9DD52B8A092200197228 /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D9DD42B8A092200197228 /* TabViewModel.swift */; };
 		F52D9DD72B8A431000197228 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D9DD62B8A431000197228 /* AppConstants.swift */; };
 		F52D9DDD2B8A55D400197228 /* TabBarPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D9DDC2B8A55D400197228 /* TabBarPages.swift */; };
@@ -62,7 +61,6 @@
 		ACB200E88C333C22D6513E41 /* Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTabBarNavigation_CustomTabBarNavigationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF74F70763DE69C58E77BEBF /* Pods-CustomTabBarNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarNavigation.debug.xcconfig"; path = "Target Support Files/Pods-CustomTabBarNavigation/Pods-CustomTabBarNavigation.debug.xcconfig"; sourceTree = "<group>"; };
 		F52D9DCC2B8A024D00197228 /* CustomTabBarVew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVew.swift; sourceTree = "<group>"; };
-		F52D9DD22B8A03A200197228 /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
 		F52D9DD42B8A092200197228 /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
 		F52D9DD62B8A431000197228 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F52D9DDC2B8A55D400197228 /* TabBarPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPages.swift; sourceTree = "<group>"; };
@@ -161,13 +159,6 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
-		F52D9DCB2B88C68400197228 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		F52D9DCE2B8A02C200197228 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +181,6 @@
 		F52D9DD02B8A02E700197228 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F52D9DD22B8A03A200197228 /* TabItems.swift */,
 				F5B0A4ED2B8E38C400E3C3DB /* TabBarItemModel.swift */,
 				F5B0A4EF2B8E932300E3C3DB /* TabType.swift */,
 			);
@@ -360,7 +350,6 @@
 		F53670762B88B0110050D4A5 /* CustomTabBarNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				F52D9DCB2B88C68400197228 /* Services */,
 				F52D9DCA2B88C67800197228 /* Features */,
 				F52D9DC92B88C66D00197228 /* Constants */,
 				F53670772B88B0110050D4A5 /* CustomTabBarNavigationApp.swift */,
@@ -619,7 +608,6 @@
 				F52D9DF12B8A58E700197228 /* SearchView.swift in Sources */,
 				F52D9DCD2B8A024D00197228 /* CustomTabBarVew.swift in Sources */,
 				F52D9DD72B8A431000197228 /* AppConstants.swift in Sources */,
-				F52D9DD32B8A03A200197228 /* TabItems.swift in Sources */,
 				F5B0A4F02B8E932300E3C3DB /* TabType.swift in Sources */,
 				F5B0A4EE2B8E38C400E3C3DB /* TabBarItemModel.swift in Sources */,
 				F5D15C2B2B8CE29E00DB1657 /* ButtonAppView.swift in Sources */,

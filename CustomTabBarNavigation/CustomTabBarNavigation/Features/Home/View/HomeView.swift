@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @Binding var isHiddenTabBar: Bool
+    @Binding var offsetTabBar: Double
     var body: some View {
         NavigationView {
             ZStack {
@@ -21,7 +22,8 @@ struct HomeView: View {
                         .padding([.top], 15)
                     
                     NavigationLink {
-                        NextScreenView(isHiddenTabBar: $isHiddenTabBar)
+                        NextScreenView(isHiddenTabBar: $isHiddenTabBar,
+                                       offsetTabBar: $offsetTabBar)
                             .onAppear {
                                 withAnimation(.easeInOut(duration: 0.1)) {
                                     isHiddenTabBar.toggle()
@@ -39,5 +41,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView(isHiddenTabBar: .constant(true))
+    HomeView(isHiddenTabBar: .constant(true), offsetTabBar: .constant(0))
 }
