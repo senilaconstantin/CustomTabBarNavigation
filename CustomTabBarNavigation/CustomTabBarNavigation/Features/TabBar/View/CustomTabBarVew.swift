@@ -46,7 +46,7 @@ struct CustomTabBarVew: View {
             
             Spacer()
         }
-        .transition(.offset(x: -AppConstants.ScreenSize.width + 50))
+        .transition(.offset(x: -AppConstants.ScreenSize.width + 75))
     }
     
     private var editTabBar: some View {
@@ -65,6 +65,6 @@ struct CustomTabBarVew: View {
             
             Spacer()
         }
-        .transition(.offset(x: AppConstants.ScreenSize.width - 50))
+        .transition(.offset(x: AppConstants.ScreenSize.width - 75))
     }
 }

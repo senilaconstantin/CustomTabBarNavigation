@@ -8,7 +8,7 @@ import SwiftUI
 
 struct TabBarItemModel {
     let iconName: String
-    let color: Color
+    var color: Color
     
     init(iconName: String, color: Color) {
         self.iconName = iconName

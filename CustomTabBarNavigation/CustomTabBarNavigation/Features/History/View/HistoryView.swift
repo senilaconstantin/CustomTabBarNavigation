@@ -24,7 +24,7 @@ struct HistoryView: View {
                 }
                 
                 Button(action: {
-                    withAnimation(.easeInOut(duration: 0.5)){
+                    withAnimation(.easeInOut(duration: 0.4)){
                         historyVM.editAction(tabType: $tabType)
                     }
                 }) {
