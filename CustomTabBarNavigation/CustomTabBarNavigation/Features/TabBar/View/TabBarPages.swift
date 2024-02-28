@@ -18,23 +18,27 @@ struct TabBarPages: View {
         ZStack {
             manageView
             
-            VStack {
-                Spacer()
-                if isHiddenTabBar {
-                    CustomTabBarVew(tabType: $tabType)
-                        .environmentObject(tabVM)
-                        .environmentObject(historyVM)
-                        .transition(
-                            .asymmetric(
-                                insertion: .move(edge: .bottom),
-                                removal: .move(edge: .bottom)
-                            )
-                        )
-                        .offset(y: offsetTabBar)
-                }
-            }
-            .padding(.horizontal, AppConstants.PaddingSize.paddingHorizontal)
+            tabBar
         }
+    }
+    
+    private var tabBar: some View {
+        VStack {
+            Spacer()
+            if isHiddenTabBar {
+                CustomTabBarVew(tabType: $tabType)
+                    .environmentObject(tabVM)
+                    .environmentObject(historyVM)
+                    .transition(
+                        .asymmetric(
+                            insertion: .move(edge: .bottom),
+                            removal: .move(edge: .bottom)
+                        )
+                    )
+                    .offset(y: offsetTabBar)
+            }
+        }
+        .padding(.horizontal, AppConstants.PaddingSize.paddingHorizontal)
     }
     
     private var manageView: some View {
