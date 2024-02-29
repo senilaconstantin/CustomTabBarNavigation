@@ -64,7 +64,7 @@ class HistoryViewModel: ObservableObject {
     }
     
     func getTitleButton(tabType: TabType) -> String {
-        return self.isEditMode(tabType: tabType) ? "Edit" : "Save"
+        return self.isEditMode(tabType: tabType) ? "Save" : "Edit"
     }
     
     func isEditMode(tabType: TabType) -> Bool {
