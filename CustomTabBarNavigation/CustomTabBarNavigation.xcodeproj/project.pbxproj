@@ -137,6 +137,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F50719612B98AB7400D23845 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F52D9DC92B88C66D00197228 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,8 +215,8 @@
 		F52D9DDF2B8A581F00197228 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				F50719612B98AB7400D23845 /* ViewModel */,
 				F52D9DE72B8A588200197228 /* View */,
-				F52D9DE62B8A587800197228 /* ViewModel */,
 				F52D9DE52B8A587000197228 /* Model */,
 			);
 			path = Search;
@@ -263,13 +270,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F52D9DE62B8A587800197228 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F52D9DE72B8A588200197228 /* View */ = {

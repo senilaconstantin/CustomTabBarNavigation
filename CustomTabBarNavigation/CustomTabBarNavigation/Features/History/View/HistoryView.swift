@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HistoryView: View {
     @Binding var tabType: TabType
-    @EnvironmentObject var historyVM: HistoryViewModel
+    @EnvironmentObject var tabVM: TabViewModel
+    @StateObject var historyVM: HistoryViewModel = .init()
     
     var body: some View {
         ZStack {
@@ -22,10 +23,16 @@ struct HistoryView: View {
                     Text("Edit mode on")
                         .cardTextStyle(size: 17, weight: .light, color: .black)
                 }
+                List {
+                    ForEach(historyVM.list.indices, id: \.self) { index in
+                        Text("\(historyVM.list[index])")
+                    }
+                }
+                .frame(height: 300)
                 
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.4)){
-                        historyVM.editAction(tabType: $tabType)
+                        historyVM.editAction(tabType: $tabType, tabs: &tabVM.tabs)
                     }
                 }) {
                     ButtonAppView(titleButton: historyVM.getTitleButton(tabType: tabType))

@@ -12,7 +12,6 @@ struct TabBarPages: View {
     @State var tabType: TabType = .mainTab
     @State var offsetTabBar = 0.0
     @StateObject var tabVM: TabViewModel = .init()
-    @StateObject var historyVM: HistoryViewModel = .init()
    
     var body: some View {
         ZStack {
@@ -28,7 +27,6 @@ struct TabBarPages: View {
             if isHiddenTabBar {
                 CustomTabBarVew(tabType: $tabType)
                     .environmentObject(tabVM)
-                    .environmentObject(historyVM)
                     .transition(
                         .asymmetric(
                             insertion: .move(edge: .bottom),
@@ -52,7 +50,7 @@ struct TabBarPages: View {
                 
             case 2: // history
                 HistoryView(tabType: $tabType)
-                    .environmentObject(historyVM)
+                    .environmentObject(tabVM)
                 
             case 3: // profile
                 ProfileView()
@@ -67,8 +65,4 @@ struct TabBarPages: View {
             )
         )
     }
-}
-
-#Preview {
-    TabBarPages()
 }

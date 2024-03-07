@@ -13,11 +13,12 @@ class TabViewModel: ObservableObject {
     @Published var isPushingFromLeft = false
    
     init() {
-        tabs = [TabBarItemModel(iconName: "house.fill"),
-                TabBarItemModel(iconName: "magnifyingglass"),
-                TabBarItemModel(iconName: "clock"),
-                TabBarItemModel(iconName: "person.fill")]
+        tabs = []
         selectedTab = 0
+        tabs = [TabBarItemModel(iconName: "house.fill", action: {_, _ in self.changeSelected(tabIndex: 0)}),
+                TabBarItemModel(iconName: "magnifyingglass", action: {_, _ in self.changeSelected(tabIndex: 1)}),
+                TabBarItemModel(iconName: "clock", action: {_, _ in self.changeSelected(tabIndex: 2)}),
+                TabBarItemModel(iconName: "person.fill", action: {_, _ in self.changeSelected(tabIndex: 3)})]
     }
     
     func isSelected(tabIndex: Int) -> Bool{
@@ -35,4 +36,11 @@ class TabViewModel: ObservableObject {
             selectedTab = tabIndex
         }
     }  
+    
+    func getColor(index: Int, tabType: TabType) -> Color {
+        if tabType == .mainTab {
+            return index == selectedTab ? .blue : tabs[index].color
+        }
+        return tabs[index].color
+    }
 }

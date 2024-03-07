@@ -10,7 +10,6 @@ import SwiftUI
 struct CustomTabBarVew: View {
     @Binding var tabType: TabType
     @EnvironmentObject var tabVM: TabViewModel
-    @EnvironmentObject var historyVM: HistoryViewModel
 
     var body: some View {
         VStack {
@@ -18,10 +17,12 @@ struct CustomTabBarVew: View {
                 Spacer()
                 switch tabType {
                 case .mainTab:
-                    mainTabBar
+                    buttonsTabBar
+                        .transition(.offset(x: -AppConstants.ScreenSize.width + 75))
                 case .editTab:
-                    editTabBar
-                } 
+                    buttonsTabBar
+                        .transition(.offset(x: AppConstants.ScreenSize.width - 75))
+                }
                 Spacer()
             }
             .frame(height: 80)
@@ -30,41 +31,40 @@ struct CustomTabBarVew: View {
         }
     }
     
-    private var mainTabBar: some View {
+    private var buttonsTabBar: some View {
         ForEach(tabVM.tabs.indices, id: \.self) { index in
             Spacer()
             Button(action: {
-                withAnimation() {
-                    tabVM.changeSelected(tabIndex: index)
+                withAnimation(.easeIn(duration: 0.5)) {
+                    tabVM.tabs[index].action(&tabVM.tabs, &tabType)
                 }
             }) {
                 Image (systemName: tabVM.tabs[index].iconName)
                     .tabButtonStyle(size: 24,
                                     scaleEffect: tabVM.isSelected(tabIndex: index) ? 1.07 : 1.0,
-                                    color: tabVM.isSelected(tabIndex: index) ? .blue : tabVM.tabs[index].color)
+                                    color: tabVM.getColor(index: index, tabType: tabType))
             }
             
             Spacer()
         }
-        .transition(.offset(x: -AppConstants.ScreenSize.width + 75))
     }
     
-    private var editTabBar: some View {
-        ForEach(historyVM.tabs.indices, id: \.self) { index in
-            Spacer()
-            Button(action: {
-                withAnimation(.easeIn(duration: 0.5)) {
-                    historyVM.changeSelected(tabIndex: index, tabType: $tabType)
-                }
-            }) {
-                Image (systemName: historyVM.tabs[index].iconName)
-                    .tabButtonStyle(size: 24,
-                                    scaleEffect: historyVM.isSelectedButtonEditTab(tabIndex: index) ? 1.07 : 1.0,
-                                    color: historyVM.tabs[index].color)
-            }
-            
-            Spacer()
-        }
-        .transition(.offset(x: AppConstants.ScreenSize.width - 75))
-    }
+    //    private var mainTabBar: some View {
+    //        ForEach(tabVM.tabs.indices, id: \.self) { index in
+    //            Spacer()
+    //            Button(action: {
+    //                withAnimation() {
+    //                    tabVM.changeSelected(tabIndex: index)
+    //                }
+    //            }) {
+    //                Image (systemName: tabVM.tabs[index].iconName)
+    //                    .tabButtonStyle(size: 24,
+    //                                    scaleEffect: tabVM.isSelected(tabIndex: index) ? 1.07 : 1.0,
+    //                                    color: tabVM.isSelected(tabIndex: index) ? .blue : tabVM.tabs[index].color)
+    //            }
+    //
+    //            Spacer()
+    //        }
+    //        .transition(.offset(x: -AppConstants.ScreenSize.width + 75))
+    //    }
 }

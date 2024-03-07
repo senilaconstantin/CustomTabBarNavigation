@@ -8,15 +8,6 @@ import SwiftUI
 
 struct TabBarItemModel {
     let iconName: String
-    var color: Color
-    
-    init(iconName: String, color: Color) {
-        self.iconName = iconName
-        self.color = color 
-    }
-    
-    init(iconName: String) {
-        self.iconName = iconName
-        self.color = .gray
-    }
+    var color: Color = .gray
+    var action: (inout [TabBarItemModel], inout TabType) -> Void = {tabs, tabType in}
 }
